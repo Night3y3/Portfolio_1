@@ -23,7 +23,7 @@ const ProjectCards: React.FC<projectcardprops> = ({ value }) => {
       </CardHeader>
       <CardContent>
         <p className="text-base font-poppins">{value.description}</p>
-        <div className=" w-full h-fit flex mt-2 justify-center flex-row gap-3">
+        <div className=" w-full h-fit grid mt-2 justify-center grid-flow-col grid-rows-1 gap-3 max-lg:grid-rows-1 max-xl:grid-rows-2 max-sm:grid-rows-2">
           {
             value.tags.map((itm: string, indx: number) => {
               return <Badge key={indx}>{itm}</Badge>
