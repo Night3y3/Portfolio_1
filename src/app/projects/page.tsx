@@ -10,7 +10,7 @@ const projectsPage = () => {
       title: "Travel Planner",
       description:
         "Travel Planner is a web application where you can plan your trip. You can add your trip details like hostals and dates.",
-      tags: ["Typescript", "Nextjs", "Mui", "Clerk", "mySQL"],
+      tags: ["Typescript", "Next", "Mui", "Clerk", "mySQL"],
       link: "https://github.com/Night3y3/TLP",
     },
     {
@@ -24,7 +24,7 @@ const projectsPage = () => {
       title: "Spotify Clone",
       description:
         "It is a Spotify Clone were you can upload your own music and listen to them. You can make your liked playlist and also can buy premium subscription.",
-      tags: ["Next 13", "Typescript", "Tailwindcss", "Supabase", "Stripe"],
+      tags: ["Next", "Typescript", "Tailwindcss", "Supabase", "Stripe"],
       link: "https://github.com/Night3y3/spotify-clone",
     },
   ];
