@@ -15,20 +15,20 @@ interface projectcardprops {
 }
 const ProjectCards: React.FC<projectcardprops> = ({ value }) => {
   return (
-  
-    <Card className="max-w-[32%] max-lg:max-w-full">
+
+    <Card className="max-w-[32%] max-lg:max-w-full overflow-hidden">
       <CardHeader>
         <CardTitle>{value.title}</CardTitle>
-       
+
       </CardHeader>
       <CardContent>
         <p className="text-base font-poppins">{value.description}</p>
-      <div className=" w-full h-fit flex mt-2 justify-center flex-row gap-3">
-        {
-          value.tags.map((itm:string, indx:number) => {
-            return <Badge key={indx}>{itm}</Badge>
-          })
-        }
+        <div className=" w-full h-fit flex mt-2 justify-center flex-row gap-3">
+          {
+            value.tags.map((itm: string, indx: number) => {
+              return <Badge key={indx}>{itm}</Badge>
+            })
+          }
         </div>
       </CardContent>
       <CardFooter className="items-center justify-center flex">

@@ -45,7 +45,7 @@ const projectsPage = () => {
         </p>
       </div>
 
-      <div className=" w-full flex flex-row gap-3 max-lg:flex-col">
+      <div className=" overflow-hidden w-full flex flex-row gap-3 max-lg:flex-col">
         {Projects.map((val, indx) => {
           return <ProjectCards key={indx} value={val} />;
         })}
