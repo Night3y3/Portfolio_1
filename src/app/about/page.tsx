@@ -8,7 +8,6 @@ const page = () => {
     { hobby: "Playing games 🎮" },
     { hobby: "Dancing 🕺" },
     { hobby: "Exploring lastest techs ⚙️" },
-    { hobby: "Sleeping 😪" },
   ];
 
   return (

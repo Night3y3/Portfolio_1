@@ -24,7 +24,7 @@ export default function Home() {
           <SocialLinks />
         </div>
         <div className="h-fit w-full mt-2 py-2 px-4">
-          <Link href="https://drive.google.com/file/d/1DhEI2nfzLPrmRVQwovcY74cV0hUKKubq/view?usp=drive_link" download className={cn(buttonVariants({ variant: "default", size: "lg" }))}>
+          <Link href="https://drive.google.com/file/d/18dkTor_KHJPWJK9fTPwci-1T3z598fir/view?usp=sharing" download className={cn(buttonVariants({ variant: "default", size: "lg" }))}>
             <ScrollText className="mx-1" />
             See Resume
           </Link>
