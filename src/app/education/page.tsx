@@ -5,7 +5,7 @@ import { Briefcase } from "lucide-react";
 const educationPage = () => {
   return (
     // ABOUT PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+    <div className=" h-1/2 w-full absolute flex flex-col items-start justify-start gap-5 overflow-hidden">
       <Badge className=" gap-2">
         <Briefcase className="h-5 w-5" />
         Education
@@ -21,11 +21,11 @@ const educationPage = () => {
           </div>
           <div className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point ">
             <div className="text-2xl font-rubik max-sm:text-xl">
-              Bachelor of Computer Science and Engineering, <br /> Institue of Engineering and Management,
+              College, <br /> Bachelor of Technology, <br />
               Kolkata
             </div>
             <p className=" font-poppins text-base w-full text-primary  max-sm:text-xs">
-              I am currently Studying Bachelor of Technology specilised with Artifical Intelligence and Machine Learning form Institue of Engineering and Management Kolkata
+              I am currently Studying Bachelor of Technology specilised with Artifical Intelligence and Machine Learning.
             </p>
           </div>
         </div>
