@@ -1,18 +1,20 @@
-import Image from "next/image";
+
 import React from "react";
+import SkillCard from "./ui/skillCard";
 
 
-interface MyComponentProps {
+interface SkillsFooterProps {
   items: Array<{ alt: string; img: any }>
 }
 
-const SkillsFooter: React.FC<MyComponentProps> = ({ items }) => {
+const SkillsFooter: React.FC<SkillsFooterProps> = ({ items }) => {
+
   return (
     <>
       {items && items.map((val, indx) => {
         return (
-          <div className="p-4" key={indx}>
-            <Image src={val?.img} alt={val?.alt} className="rounded-full w-auto max-h-20" />
+          <div className="p-4 box-border" key={indx}>
+            <SkillCard img={val?.img} name={val?.alt} />
           </div>
         );
       })}

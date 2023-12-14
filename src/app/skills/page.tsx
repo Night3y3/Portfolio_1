@@ -15,6 +15,10 @@ import tailwind from '../../../public/tailwindcss.png'
 import github from '../../../public/github.png'
 import stripe from '../../../public/stripe.png'
 import supabase from '../../../public/supabase.png'
+import gsap from '../../../public/gsap.png'
+import figma from '../../../public/figma.png'
+import mongodb from '../../../public/mongodb.png'
+import node from '../../../public/node.png'
 
 const skillPage = () => {
 
@@ -34,6 +38,10 @@ const skillPage = () => {
     { alt: "github", img: github },
     { alt: "stripe", img: stripe },
     { alt: "supabase", img: supabase },
+    { alt: "gsap", img: gsap },
+    { alt: "figma", img: figma },
+    { alt: "mongodb", img: mongodb },
+    { alt: "node", img: node },
   ]
 
 
@@ -65,12 +73,15 @@ const skillPage = () => {
           <h1 className="gap-2 text-2xl font-poppins text-primary font-semibold flex text_underline relative max-sm:text-xl">
             Framework/Libraries and Version Control
           </h1>
-          <div className="w-full h-fit flex-row flex justify-between items-center">
-            <SkillsFooter items={framework.slice(0, 4)} />
+          <div className="w-full h-fit justify-between items-center grid grid-flow-col grid-rows-3 ">
+            <SkillsFooter items={framework} />
+          </div>
+          {/* <div className="w-full h-fit flex-row flex justify-between items-center">
+            <SkillsFooter items={framework.slice(4, 8)} />
           </div>
           <div className="w-full h-fit flex-row flex justify-between items-center">
-            <SkillsFooter items={framework.slice(4,)} />
-          </div>
+            <SkillsFooter items={framework.slice(8,)} />
+          </div> */}
         </div>
       </div>
     </div>
