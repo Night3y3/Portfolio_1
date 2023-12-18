@@ -11,8 +11,8 @@ import GithubBtn from "@/components/GithubBtn";
 export const siteConfig = {
   name: "Sabuj Ghosh",
   description: "I am a Passionate Software Developer",
-  ogImage: "https://sabuj.vercel.app/og-image.png",
-  url: "https://sabuj.vercel.app",
+  ogImage: "https://sabujghosh.vercel.app/og-image.png",
+  url: "https://sabujghosh.vercel.app",
 }
 export default function Home() {
   return (
