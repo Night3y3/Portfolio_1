@@ -24,10 +24,26 @@ export default function Home() {
           <SocialLinks />
         </div>
         <div className="h-fit w-full mt-2 py-2 px-4">
-          <Link href="https://drive.google.com/file/d/18dkTor_KHJPWJK9fTPwci-1T3z598fir/view?usp=sharing" download className={cn(buttonVariants({ variant: "default", size: "lg" }))}>
-            <ScrollText className="mx-1" />
-            See Resume
-          </Link>
+
+          <a href="#_" className="relative inline-block text-lg group">
+            <span
+              className="relative z-10 block py-[0.9vw] px-[2vw] overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-300 rounded-full group-hover:text-white"
+            >
+              {/* <span
+                className="absolute inset-0 w-full h-full px-3 py-3 rounded-lg bg-gray-50"
+              ></span> */}
+              <span
+                className="absolute left-0 w-96 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-16 bg-gray-900 group-hover:-rotate-180 ease"
+              ></span>
+              <span className="relative text-xl font-bold tracking-[-1px] flex"
+              >
+                <ScrollText className=" mr-1 mt-1" />
+                View Resume</span
+              >
+            </span>
+          </a>
+
+
         </div>
       </div>
       {/* RIGHT SIDE image  */}

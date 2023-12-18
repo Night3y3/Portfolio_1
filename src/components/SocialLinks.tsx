@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const SocialLinks = () => {
   const links = [
-    { name: "Facebook", link: "https://www.facebook.com/sabuj.ghosh.710", icon: <Facebook /> },
-    { name: "Twitter", link: "https://twitter.com/SabujGh55659975", icon: <Twitter /> },
+    { name: "Twitter", link: "https://twitter.com/sabujghosh21", icon: <Twitter /> },
     { name: "Linkedin", link: "https://www.linkedin.com/in/sabujghosh/", icon: <Linkedin /> },
     { name: "Codepen", link: "https://codepen.io/sabujgh55659975", icon: <Codepen /> },
+    { name: "Facebook", link: "https://www.facebook.com/sabuj.ghosh.710", icon: <Facebook /> },
   ];
   return (
     <>
