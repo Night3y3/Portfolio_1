@@ -24,24 +24,24 @@ const skillPage = () => {
 
   const language = [
     // { alt: "html", img: html },
-    { alt: "charp", img: csharp },
-    { alt: "js", img: js },
-    { alt: "ts", img: ts },
-    { alt: "java", img: java },
+    { alt: "C#", img: csharp },
+    { alt: "Javascript", img: js },
+    { alt: "Typescript", img: ts },
+    { alt: "Java", img: java },
   ]
   const framework = [
-    { alt: "react", img: react },
-    { alt: "next", img: next },
-    { alt: "zustand", img: zustand },
-    { alt: "tailwind", img: tailwind },
-    { alt: "clerk", img: clerk },
-    { alt: "github", img: github },
-    { alt: "stripe", img: stripe },
-    { alt: "supabase", img: supabase },
-    { alt: "gsap", img: gsap },
-    { alt: "figma", img: figma },
-    { alt: "mongodb", img: mongodb },
-    { alt: "node", img: node },
+    { alt: "React", img: react },
+    { alt: "Next", img: next },
+    { alt: "Zustand", img: zustand },
+    { alt: "Tailwind", img: tailwind },
+    { alt: "Clerk", img: clerk },
+    { alt: "Git", img: github },
+    { alt: "Stripe", img: stripe },
+    { alt: "Supabase", img: supabase },
+    { alt: "Gsap", img: gsap },
+    { alt: "Figma", img: figma },
+    { alt: "Mongodb", img: mongodb },
+    { alt: "Node", img: node },
   ]
 
 
