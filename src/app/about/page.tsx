@@ -23,8 +23,8 @@ const page = () => {
         </Heading>
 
         <p className=" font-poppins text-xl w-full text-primary max-sm:text-lg">
-          I am a Front-End Web Developer from Kolkata, WB, India.
-          I love crafting cool web projects and games too.
+          I am a Full-Stack Web Developer from Kolkata, WB, India.
+          I am having 2 years of experience in Web Development.
           My lastest achievement lies in winning 5ireChain Track in
           Hack this Fall 3.0. I am very comfortable with adopting to
           new software and new tech.I always try to follow the industry standards
