@@ -1,7 +1,10 @@
+"use client";
 import Aboutfooter from "@/components/Aboutfooter";
 import Heading from "@/components/Heading";
 import { Badge } from "@/components/ui/badge";
 import { Circle, Heart, User2 } from "lucide-react";
+import Inner from "@/components/Layouts/Inner";
+
 const page = () => {
   const items = [
     { hobby: "Coding 🧑🏻‍💻" },
@@ -12,6 +15,7 @@ const page = () => {
 
   return (
     // ABOUT PAGE
+
     <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
       <Badge className=" gap-2">
         <User2 className="h-5 w-5" />
@@ -54,6 +58,7 @@ const page = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

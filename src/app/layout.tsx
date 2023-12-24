@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import { siteConfig } from "./page";
+import { motion, AnimatePresence } from "framer-motion";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -85,6 +86,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${rubik.variable}`}>
