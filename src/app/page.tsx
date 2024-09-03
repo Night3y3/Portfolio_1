@@ -1,7 +1,5 @@
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { ScrollText } from "lucide-react";
-
+import dynamic from "next/dynamic";
 
 import SocialLinks from "@/components/SocialLinks";
 import HeroTexts from "@/components/HeroTexts";
@@ -14,12 +12,21 @@ export const siteConfig = {
   ogImage: "https://sabujghosh.vercel.app/og-image.png",
   url: "https://sabujghosh.vercel.app",
 }
+
+const HeroTextsCSR = dynamic(() => import("@/components/HeroTexts"), {
+  ssr: false,
+});
+
+const HeroImageCSR = dynamic(() => import("@/components/HeroImage"), {
+  ssr: false,
+});
+
 export default function Home() {
   return (
     <>
       {/* LEFT SIDE  */}
       <div className=" h-full w-auto flex flex-col justify-start gap-4">
-        <HeroTexts />
+        <HeroTextsCSR />
         <div className="h-fit w-full p-4 flex gap-3">
           <SocialLinks />
         </div>
@@ -50,7 +57,7 @@ export default function Home() {
       <div className="h-full w-[47%] relative block max-lg:hidden">
 
         {/* IMAGE  */}
-        <HeroImage />
+        <HeroImageCSR />
       </div>
 
       {/* GITHUB BUTTON  */}

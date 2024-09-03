@@ -1,9 +1,10 @@
 import Heading from "@/components/Heading";
 import { Badge } from "@/components/ui/badge";
-import { LinkPreview } from "@/components/ui/link-preview";
 import { Briefcase } from "lucide-react";
-import xadepic from "../../../public/xade-trade-ui-pic.png"
-import tradingview from "../../../public/trading-view.png"
+import dynamic from "next/dynamic";
+const DemoXadeLinksCS = dynamic(() => import("@/components/DemoXadeLinks"), {
+  ssr: false,
+});
 
 const educationPage = () => {
   return (
@@ -42,9 +43,7 @@ const educationPage = () => {
               Xade Finance, <br /> Ex-SDE Intern <br />
               Remote
             </div>
-            <p className=" font-poppins text-base w-full text-primary  max-sm:text-xs">
-              I worked on blockchain trading platform using {" "}<LinkPreview url="https://www.tradingview.com/" isStatic imageSrc={tradingview.src} className=" font-bold hover:text-blue-500 hover:underline" width={300} height={250}>Trading-View Charts</LinkPreview>{" "} and wallets you can check it out <LinkPreview url="https://trade.xade.finance" isStatic imageSrc={xadepic.src} className=" font-bold hover:text-blue-500 hover:underline" width={300} height={250}>here</LinkPreview>{" "}.
-            </p>
+            <DemoXadeLinksCS />
           </div>
 
         </div>

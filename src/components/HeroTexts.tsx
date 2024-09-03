@@ -1,3 +1,4 @@
+"use client";
 import { Cover } from "./ui/cover";
 
 const HeroTexts = () => {
