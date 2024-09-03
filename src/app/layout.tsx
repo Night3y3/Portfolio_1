@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import { siteConfig } from "./page";
-import { motion, AnimatePresence } from "framer-motion";
+import { FollowerPointerCard } from "@/components/ui/following-pointer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -89,17 +89,19 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${rubik.variable}`}>
-        <main
-          className={cn(
-            "flex relative screen break-words min-h-screen items-center justify-between pt-14 pb-4 px-40 max-md:p-4 bg-transparent max-sm:pt-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]",
-            { "bg-white": "#E6E7EB" }
-          )}
-        >
-          {/* NAVBAR ->  */}
-          <Navbar />
-          {children}
-        </main>
+      <body className={`${poppins.variable} ${rubik.variable} min-h-screen`}>
+        <FollowerPointerCard>
+          <main
+            className={cn(
+              "flex relative screen break-words min-h-screen items-center justify-between pt-14 pb-4 px-40 max-md:p-4 bg-transparent max-sm:pt-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]",
+              { "bg-white": "#E6E7EB" }
+            )}
+          >
+            {/* NAVBAR ->  */}
+            <Navbar />
+            {children}
+          </main>
+        </FollowerPointerCard>
       </body>
     </html>
   );

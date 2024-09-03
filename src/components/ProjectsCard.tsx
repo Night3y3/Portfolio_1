@@ -35,7 +35,7 @@ const ProjectCards: React.FC<projectcardprops> = ({ value }) => {
         <Link
           href={value.link}
           target="blank"
-          className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+          className={cn(buttonVariants({ variant: "default", size: "lg" }), `cursor-none`)}
         >
           Visit Project
         </Link>

@@ -118,3 +118,14 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  cursor: none;
+}
+
+#__next {
+  height: 100%;
+}

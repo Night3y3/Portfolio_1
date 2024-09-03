@@ -59,7 +59,7 @@ const Navbar = () => {
                 <Link href={itm.link}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "sm" }),
-                    'relative'
+                    'relative cursor-none'
                   )}
                 >
 
