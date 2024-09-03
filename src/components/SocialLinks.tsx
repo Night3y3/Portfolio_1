@@ -16,7 +16,7 @@ const SocialLinks = () => {
         return (
           <Link key={indx} target="blank"
             href={itm.link}
-            className={cn(buttonVariants({ variant: "outline", size: "icon" }))}
+            className={cn(buttonVariants({ variant: "outline", size: "icon" }), `cursor-none`)}
           >{itm.icon}</Link>
         );
       })}

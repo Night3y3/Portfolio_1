@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect, useRef } from "react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {
@@ -10,13 +11,127 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Button } from "./ui/button"
 import { SendEmail } from "./SendEmail"
 import { motion } from "framer-motion"
-import { useState } from "react"
 
-const ContactForm = () => {
+
+interface Particle {
+  x: number
+  y: number
+  emoji: string
+  size: number
+  velocity: { x: number; y: number }
+  rotation: number
+  rotationSpeed: number
+}
+
+export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
+  const [isFormValid, setIsFormValid] = useState(false)
+  const [isExploding, setIsExploding] = useState(false)
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const particles = useRef<Particle[]>([])
+
+  const emojis = ['🎉', '🎊', '🥳', '🍾', '🎈', '🎇', '✨', '💥']
+
+  useEffect(() => {
+    if (isExploding) {
+      const canvas = canvasRef.current
+      const button = buttonRef.current
+      if (!canvas || !button) return
+
+      const ctx = canvas.getContext('2d')
+      if (!ctx) return
+
+      const updateCanvasSize = () => {
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+      }
+
+      updateCanvasSize()
+      window.addEventListener('resize', updateCanvasSize)
+
+      const buttonRect = button.getBoundingClientRect()
+      const centerX = buttonRect.left + buttonRect.width / 2
+      const centerY = buttonRect.top + buttonRect.height / 2
+
+      for (let i = 0; i < 50; i++) {
+        const angle = Math.random() * Math.PI * 2
+        const velocity = 5 + Math.random() * 5
+        particles.current.push({
+          x: centerX,
+          y: centerY,
+          emoji: emojis[Math.floor(Math.random() * emojis.length)],
+          size: 20 + Math.random() * 20,
+          velocity: {
+            x: Math.cos(angle) * velocity,
+            y: Math.sin(angle) * velocity,
+          },
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.2,
+        })
+      }
+
+      const animate = () => {
+        if (!ctx) return
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        particles.current = particles.current.filter((particle) => {
+          particle.x += particle.velocity.x
+          particle.y += particle.velocity.y
+          particle.velocity.y += 0.1 // gravity
+          particle.rotation += particle.rotationSpeed
+
+          if (particle.y < canvas.height) {
+            ctx.save()
+            ctx.translate(particle.x, particle.y)
+            ctx.rotate(particle.rotation)
+            ctx.font = `${particle.size}px Arial`
+            ctx.textAlign = 'center'
+            ctx.textBaseline = 'middle'
+            ctx.fillText(particle.emoji, 0, 0)
+            ctx.restore()
+            return true
+          }
+          return false
+        })
+
+        if (particles.current.length > 0) {
+          requestAnimationFrame(animate)
+        } else {
+          setIsExploding(false)
+        }
+      }
+
+      animate()
+
+      return () => {
+        window.removeEventListener('resize', updateCanvasSize)
+      }
+    }
+  }, [isExploding])
+
+  const handleClick = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (isFormValid && !isSubmitting) {
+      setIsSubmitting(true)
+      setIsExploding(true)
+      particles.current = []
+      const formDataObj = new FormData();
+      formDataObj.append('name', formData.name);
+      formDataObj.append('email', formData.email);
+      formDataObj.append('message', formData.message);
+      await SendEmail(formDataObj)
+      // Handle redirect or success message after submission here
+    }
+  }
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -46,6 +161,18 @@ const ContactForm = () => {
     },
   }
 
+  useEffect(() => {
+    setIsFormValid(formData.name !== "" && formData.email !== "" && formData.message !== "")
+  }, [formData])
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }))
+  }
+
   return (
     <motion.div
       initial="hidden"
@@ -53,12 +180,7 @@ const ContactForm = () => {
       variants={containerVariants}
     >
       <Card className="w-full max-w-md mx-auto">
-        <form
-          action={async (formData) => {
-            setIsSubmitting(true)
-            await SendEmail(formData)
-          }}
-        >
+        <form onSubmit={handleClick}>
           <CardHeader>
             <motion.div variants={childVariants}>
               <CardTitle className="icon_underline text-2xl font-bold mb-2">Send me a mail</CardTitle>
@@ -77,7 +199,9 @@ const ContactForm = () => {
                   name="name"
                   required
                   placeholder="Enter your name"
-                  className="w-full"
+                  className="w-full cursor-none"
+                  value={formData.name}
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="space-y-2">
@@ -85,10 +209,12 @@ const ContactForm = () => {
                 <Input
                   type="email"
                   id="email"
-                  name="SenderEmail"
+                  name="email"
                   required
                   placeholder="Enter your email"
-                  className="w-full"
+                  className="w-full cursor-none"
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="space-y-2">
@@ -98,35 +224,35 @@ const ContactForm = () => {
                   placeholder="Your message here..."
                   name="message"
                   required
-                  className="w-full min-h-[120px] resize-none rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="w-full min-h-[120px] resize-none rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-none"
+                  value={formData.message}
+                  onChange={handleInputChange}
                 ></textarea>
               </div>
             </motion.div>
           </CardContent>
           <CardFooter>
-            <motion.div
-              variants={childVariants}
-              className="w-full"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    className="w-5 h-5 border-t-2 border-b-2 border-white rounded-full"
-                  />
-                ) : (
-                  "Submit"
-                )}
-              </Button>
-            </motion.div>
+            <div className="w-full flex justify-center">
+              <motion.button
+                type="submit"
+                ref={buttonRef}
+                className="text-md transform-gpu rounded-lg bg-red-500 font-semibold text-white px-4 py-2 disabled:opacity-50 disabled:cursor-none cursor-none"
+                whileTap={{ scale: 0.95 }}
+                disabled={!isFormValid || isSubmitting}
+              >
+                Send Message 🎉
+              </motion.button>
+              {isExploding && (
+                <canvas
+                  ref={canvasRef}
+                  className="pointer-events-none fixed inset-0"
+                  style={{ zIndex: 9999 }}
+                />
+              )}
+            </div>
           </CardFooter>
         </form>
       </Card>
     </motion.div>
   )
 }
-
-export default ContactForm
