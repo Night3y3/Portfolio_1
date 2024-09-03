@@ -10,7 +10,9 @@ const page = () => {
     { hobby: "Coding 🧑🏻‍💻" },
     { hobby: "Playing games 🎮" },
     { hobby: "Dancing 🕺" },
-    { hobby: "Exploring lastest techs ⚙️" },
+    { hobby: "Exploring latest techs ⚙️" },
+    { hobby: "Listening to music 🎧" },
+    { hobby: "Gym 💪🏻" },
   ];
 
   return (
@@ -23,13 +25,13 @@ const page = () => {
       </Badge>
       <div className="flex flex-col gap-3">
         <Heading>
-          Front-end Web <br /> Developer, Based In India.
+          Full-Stack Web <br /> Developer, Based In India.
         </Heading>
 
         <p className=" font-poppins text-xl w-full text-primary max-sm:text-lg">
           I am a Full-Stack Web Developer from Kolkata, WB, India.
           I am having 2 years of experience in Web Development.
-          My lastest achievement lies in winning 5ireChain Track in
+          My current achievement lies in winning 5ireChain Track in
           Hack this Fall 3.0. I am very comfortable with adopting to
           new software and new tech.I always try to follow the industry standards
           while engaging with any projects. Plus to mention that i am also a fast

@@ -1,18 +1,24 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     screens: {
-      sm: '480px',
-      md: '720px',
-      lg: '976px',
-      xl: '1440px',
+      sm: "480px",
+      md: "720px",
+      lg: "976px",
+      xl: "1440px",
     },
     container: {
       center: true,
@@ -20,12 +26,11 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-      
     },
     extend: {
-      fontFamily:{
-        poppins: ['var(--font-poppins)'],
-        rubik: ['var(--font-rubik)']
+      fontFamily: {
+        poppins: ["var(--font-poppins)"],
+        rubik: ["var(--font-rubik)"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -83,5 +88,16 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
+};
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
 }

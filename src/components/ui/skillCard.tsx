@@ -27,7 +27,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ img, name }) => {
                             src={img}
                             alt={name}
                             className='rounded-full w-auto max-h-20'
-                            onMouseEnter={() => setCursor('typescropt-cursor')}
+                            onMouseEnter={() => setCursor('typescript-cursor')}
                             onMouseLeave={() => setCursor('default')}
                         />
                     </TooltipTrigger>

@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className="h-fit w-full mt-2 py-2 px-4">
 
-          <a href="https://drive.google.com/file/d/1YDgzQ2jT1C-epTdVSOecpTii43EoLDsF/view?usp=sharing" className="relative inline-block text-lg group">
+          <a href="https://docs.google.com/document/d/1fBpTfqntwHNI9yBlSMCba-KXWyEEbOXQz45-zyO5P_A/edit?usp=sharing" className="relative inline-block text-lg group">
             <span
               className="relative z-10 block py-[0.9vw] px-[2vw] overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-300 rounded-full group-hover:text-white"
             >
