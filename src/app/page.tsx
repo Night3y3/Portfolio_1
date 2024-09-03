@@ -1,7 +1,5 @@
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { ScrollText } from "lucide-react";
-
+import dynamic from "next/dynamic";
 
 import SocialLinks from "@/components/SocialLinks";
 import HeroTexts from "@/components/HeroTexts";
@@ -14,18 +12,27 @@ export const siteConfig = {
   ogImage: "https://sabujghosh.vercel.app/og-image.png",
   url: "https://sabujghosh.vercel.app",
 }
+
+const HeroTextsCSR = dynamic(() => import("@/components/HeroTexts"), {
+  ssr: false,
+});
+
+const HeroImageCSR = dynamic(() => import("@/components/HeroImage"), {
+  ssr: false,
+});
+
 export default function Home() {
   return (
     <>
       {/* LEFT SIDE  */}
       <div className=" h-full w-auto flex flex-col justify-start gap-4">
-        <HeroTexts />
+        <HeroTextsCSR />
         <div className="h-fit w-full p-4 flex gap-3">
           <SocialLinks />
         </div>
         <div className="h-fit w-full mt-2 py-2 px-4">
 
-          <a href="https://drive.google.com/file/d/1YDgzQ2jT1C-epTdVSOecpTii43EoLDsF/view?usp=sharing" className="relative inline-block text-lg group">
+          <a href="https://docs.google.com/document/d/1fBpTfqntwHNI9yBlSMCba-KXWyEEbOXQz45-zyO5P_A/edit?usp=sharing" className="relative inline-block text-lg group">
             <span
               className="relative z-10 block py-[0.9vw] px-[2vw] overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-300 rounded-full group-hover:text-white"
             >
@@ -50,7 +57,7 @@ export default function Home() {
       <div className="h-full w-[47%] relative block max-lg:hidden">
 
         {/* IMAGE  */}
-        <HeroImage />
+        <HeroImageCSR />
       </div>
 
       {/* GITHUB BUTTON  */}

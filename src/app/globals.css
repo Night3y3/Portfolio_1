@@ -114,3 +114,7 @@
   background-color: none;
   color: #fab514;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

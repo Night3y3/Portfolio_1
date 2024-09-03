@@ -1,3 +1,5 @@
+"use server";
+
 import { Resend } from "resend";
 import { redirect } from "next/navigation";
 
@@ -17,7 +19,7 @@ export const SendEmail = async (formdata: FormData) => {
     from: "Contact Form <onboarding@resend.dev>",
     to: `sabrexghosh@gmail.com`,
     subject: `${name} From Contact Form.`,
-    reply_to: `${SenderEmail}`,
+    replyTo: `${SenderEmail}`,
     text: `sender email: ${SenderEmail} 
      ${message}`,
   });

@@ -1,3 +1,5 @@
+"use client";
+import { Cover } from "./ui/cover";
 
 const HeroTexts = () => {
 
@@ -11,7 +13,9 @@ const HeroTexts = () => {
       <h2 className="font-poppins text-2xl mt-4  max-sm:text-xl" >
         I am a Passionate
         <span className="font-rubik text-3xl ml-1 max-sm:text-2xl text-primary">
-          Software Developer.
+          <Cover>
+            Software Developer.
+          </Cover>
         </span>
       </h2>
     </>
