@@ -19,7 +19,7 @@ const rubik = Rubik({
   variable: "--font-rubik",
 });
 
-const mouseSupportedOS: string[] = ["Windows", "macOS", "Linux", "Chrome OS", "Xbox", "PlayStation", "Ubuntu", "Unix", "Arch"];
+const mouseSupportedOS: string[] = ["Windows", "Mac OS", "Linux", "Chrome OS", "Xbox", "PlayStation", "Ubuntu", "Unix", "Arch"];
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sabuj.vercel.app"),
