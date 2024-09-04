@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import { siteConfig } from "./page";
 import { FollowerPointerCard } from "@/components/ui/following-pointer";
+import { headers } from 'next/headers';
+import UAParser from 'ua-parser-js';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,6 +18,8 @@ const rubik = Rubik({
   weight: "600",
   variable: "--font-rubik",
 });
+
+const mouseSupportedOS: string[] = ["Windows", "macOS", "Linux", "Chrome OS", "Xbox", "PlayStation", "Ubuntu", "Unix", "Arch"];
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sabuj.vercel.app"),
@@ -86,23 +90,41 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = headers();
+  const userAgent = headersList.get('user-agent') || '';
+  const parser = new UAParser(userAgent);
+  const deviceInfo = parser.getResult();
+
+  const isDesktop = mouseSupportedOS.includes(deviceInfo.os.name ?? "");
 
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${rubik.variable} min-h-screen`}>
-        <FollowerPointerCard>
-          <main
-            className={cn(
-              "flex relative screen break-words min-h-screen items-center justify-between pt-14 pb-4 px-40 max-md:p-4 bg-transparent max-sm:pt-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]",
-              { "bg-white": "#E6E7EB" }
-            )}
-          >
-            {/* NAVBAR ->  */}
+        {isDesktop ? (
+          <FollowerPointerCard title={`${deviceInfo.os.name}'s user`}>
+            <MainContent>
+              <Navbar />
+              {children}
+            </MainContent>
+          </FollowerPointerCard>
+        ) : (
+          <MainContent>
             <Navbar />
             {children}
-          </main>
-        </FollowerPointerCard>
+          </MainContent>
+        )}
       </body>
     </html>
   );
 }
+
+const MainContent: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <main
+    className={cn(
+      "flex relative screen break-words min-h-screen items-center justify-between pt-14 pb-4 px-40 max-md:p-4 bg-transparent max-sm:pt-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]",
+      { "bg-white": "#E6E7EB" }
+    )}
+  >
+    {children}
+  </main>
+);
