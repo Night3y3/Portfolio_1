@@ -5,6 +5,7 @@ import {
   Home,
   Layers,
   Lightbulb,
+  Mail,
   PackagePlus,
   Phone,
   User2,
@@ -28,7 +29,7 @@ const Navbar = () => {
     { name: "skills", icon: <Lightbulb />, link: "/skills" },
     { name: "projects", icon: <Layers />, link: "/projects" },
     { name: "work", icon: <Briefcase />, link: "/education" },
-    { name: "contact", icon: <Phone />, link: "/contact" },
+    { name: "contact", icon: <Mail />, link: "/contact" },
   ];
 
   const [scrolling, setScrolling] = useState(false);
@@ -50,7 +51,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`h-fit w-fit fixed top-5 right-0 left-0  m-auto border border-black rounded-full  p-2 bg-transparent   flex-row gap-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 max-sm:gap-1 ${scrolling ? "hidden" : "flex"}`}>
+    <div className={`h-fit w-fit fixed bottom-5 right-0 left-0  m-auto border border-black rounded-full  p-2 bg-transparent   flex-row gap-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 max-sm:gap-1 ${scrolling ? "hidden" : "flex"}`}>
       {items.map((itm) => {
         return (
           <TooltipProvider key={itm.name}>
