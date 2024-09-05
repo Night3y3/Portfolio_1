@@ -7,6 +7,7 @@ import { siteConfig } from "./page";
 import { FollowerPointerCard } from "@/components/ui/following-pointer";
 import { headers } from 'next/headers';
 import UAParser from 'ua-parser-js';
+import NavBarV2 from "@/components/NavBarV2";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -103,13 +104,13 @@ export default function RootLayout({
         {isDesktop ? (
           <FollowerPointerCard title={`${deviceInfo.os.name}'s user`}>
             <MainContent>
-              <Navbar />
+              <NavBarV2 />
               {children}
             </MainContent>
           </FollowerPointerCard>
         ) : (
           <MainContent>
-            <Navbar />
+            <NavBarV2 />
             {children}
           </MainContent>
         )}
