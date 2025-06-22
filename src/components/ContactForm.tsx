@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card"
 import { SendEmail } from "./SendEmail"
 import { motion } from "framer-motion"
+import { redirect } from "next/navigation"
 
 
 interface Particle {
@@ -37,6 +38,30 @@ export default function ContactForm() {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particles = useRef<Particle[]>([])
+
+  const namePlaceholders = [
+    "Steve Jobs",
+    "John Doe",
+    "Satoshi Nakamoto",
+    "Elon Musk",
+    "Mark Zuckerberg",
+  ];
+
+  const emailPlaceholders = [
+    "steve.jobs@apple.com",
+    "john.doe@example.com",
+    "satoshi.nakamoto@bitcoin.com",
+    "elon.musk@x.com",
+    "mark.zuckerberg@meta.com"
+  ];
+
+  const messagePlaceholders = [
+    "Hello, I would like to work with you on a project.",
+    "I have a project idea that I would like to discuss with you.",
+    "I would like to invite you to a conference.",
+    "I would like to invite you to a meeting.",
+    "I would like to invite you to a party."
+  ];
 
   const emojis = ['🎉', '🎊', '🥳', '🍾', '🎈', '🎇', '✨', '💥']
 
@@ -117,6 +142,14 @@ export default function ContactForm() {
     }
   }, [isExploding])
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  };
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("submitted");
+  };
+
   const handleClick = async (e: React.FormEvent) => {
     e.preventDefault()
 
@@ -130,6 +163,7 @@ export default function ContactForm() {
       formDataObj.append('message', formData.message);
       await SendEmail(formDataObj)
       // Handle redirect or success message after submission here
+      redirect("/")
     }
   }
 
