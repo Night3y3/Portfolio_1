@@ -38,7 +38,7 @@ export default function Home() {
         >
 
 
-          <a href="https://docs.google.com/document/d/1fBpTfqntwHNI9yBlSMCba-KXWyEEbOXQz45-zyO5P_A/edit?usp=sharing" className="relative inline-block text-lg group cursor-none">
+          <a href="https://docs.google.com/document/d/1wwWXw1cDmmxf4qJV4hbldI2vvARhu2GwQg4lj5pQw1o/edit?usp=sharing" className="relative inline-block text-lg group cursor-none">
             <span
               className="relative z-10 block py-[0.9vw] px-[2vw] overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-300 rounded-full group-hover:text-white"
             >

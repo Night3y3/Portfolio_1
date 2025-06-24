@@ -122,7 +122,7 @@ export default function RootLayout({
 const MainContent: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <main
     className={cn(
-      "flex relative screen break-words min-h-screen items-center justify-between pt-14 pb-4 px-40 max-md:p-4 bg-transparent max-sm:pt-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]",
+      "flex relative screen break-words min-h-screen items-center justify-between pt-14 pb-4 px-40 max-md:p-4 bg-transparent max-sm:pt-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] cursor-none",
       { "bg-white": "#E6E7EB" }
     )}
   >

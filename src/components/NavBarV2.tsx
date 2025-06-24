@@ -34,13 +34,13 @@ export default function NavBarV2() {
             ),
             href: "/skills",
         },
-        {
-            title: "projects",
-            icon: (
-                <Layers />
-            ),
-            href: "/projects",
-        },
+        // {
+        //     title: "projects",
+        //     icon: (
+        //         <Layers />
+        //     ),
+        //     href: "/projects",
+        // },
         {
             title: "work",
             icon: (
