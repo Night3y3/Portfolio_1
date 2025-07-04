@@ -23,7 +23,7 @@ const rubik = Rubik({
 const mouseSupportedOS: string[] = ["Windows", "Mac OS", "Linux", "Chrome OS", "Xbox", "PlayStation", "Ubuntu", "Unix", "Arch"];
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sabuj.vercel.app"),
+  metadataBase: new URL("https://sabujghosh.vercel.app"),
   title: {
     default: siteConfig.name,
     template: `%s - Software Engineer`,

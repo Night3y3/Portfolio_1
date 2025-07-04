@@ -129,3 +129,47 @@ body {
 #__next {
   height: 100%;
 }
+
+@layer utilities {
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .animate-spin-slow {
+    animation: spin 25s linear infinite;
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(var(--tw-gradient-stops));
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateX(15deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(15deg);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .animate-spin-slow {
+    animation: spin 30s linear infinite;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Smooth interactions */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}

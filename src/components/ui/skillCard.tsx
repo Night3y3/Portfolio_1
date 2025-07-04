@@ -42,21 +42,3 @@ const SkillCard: React.FC<SkillCardProps> = ({ img, name }) => {
 };
 
 export default SkillCard;
-
-
-{/* <TooltipProvider key={itm.name}>
-    <Tooltip>
-        <TooltipTrigger asChild>
-            <Link href={itm.link}
-                className={cn(
-                    buttonVariants({ variant: "ghost", size: "sm" })
-                )}
-            >
-                {itm.icon}
-            </Link>
-        </TooltipTrigger>
-        <TooltipContent>
-            <p>{itm.name}</p>
-        </TooltipContent>
-    </Tooltip>
-</TooltipProvider> */}
