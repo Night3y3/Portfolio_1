@@ -1,51 +1,17 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "spiffy-solstice",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@radix-ui/react-hover-card": "^1.1.1",
-    "@radix-ui/react-label": "^2.0.2",
-    "@radix-ui/react-toast": "^1.1.5",
-    "@radix-ui/react-tooltip": "^1.0.7",
-    "@tabler/icons-react": "^3.14.0",
-    "@tsparticles/engine": "^3.5.0",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.5.0",
-    "@vercel/og": "^0.5.20",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "framer-motion": "^10.16.16",
-    "lottie-react": "^2.4.0",
-    "lottie-web": "^5.12.2",
-    "lucide-react": "^0.292.0",
-    "next": "^14.2.7",
-    "punycode": "^2.3.1",
-    "qss": "^3.0.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-spinners": "^0.13.8",
-    "resend": "^4.0.0",
-    "sharp": "^0.33.5",
-    "tailwind-merge": "^2.0.0",
-    "tailwindcss-animate": "^1.0.7",
-    "ua-parser-js": "^1.0.38"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/ua-parser-js": "^0.7.39",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.2",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "astro": "^6.1.9"
   }
 }
