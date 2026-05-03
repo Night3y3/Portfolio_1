@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css"
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background"
+import sabujLogo from "@/assets/logos/sabuj-logo.png"
 ---
 
 <html lang="en" class="dark">
@@ -12,10 +13,12 @@ import { DottedGlowBackground } from "@/components/ui/dotted-glow-background"
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Sabuj Ghosh — Software Engineer" />
     <meta property="og:description" content="Sabuj Ghosh — Software Engineer" />
+    <meta property="og:image" content={new URL(sabujLogo.src, Astro.site ?? Astro.url).toString()} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Sabuj Ghosh — Software Engineer" />
     <meta name="twitter:description" content="Sabuj Ghosh — Software Engineer" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="twitter:image" content={new URL(sabujLogo.src, Astro.site ?? Astro.url).toString()} />
+    <link rel="icon" type="image/png" href={sabujLogo.src} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
