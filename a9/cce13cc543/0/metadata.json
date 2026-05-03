@@ -1,0 +1,51 @@
+{
+  "cli_version": "0.5.5",
+  "checkpoint_id": "a9cce13cc543",
+  "session_id": "b3f25a77-a626-434d-8f23-ff5682279d69",
+  "strategy": "manual-commit",
+  "created_at": "2026-05-03T13:07:31.415724Z",
+  "branch": "astro-portfolio",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "bun.lock"
+  ],
+  "agent": "Claude Code",
+  "model": "",
+  "turn_id": "623b6a7a7eab",
+  "checkpoint_transcript_start": 68,
+  "transcript_lines_at_start": 68,
+  "token_usage": {
+    "input_tokens": 47553,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 93719,
+    "output_tokens": 654,
+    "api_call_count": 3
+  },
+  "session_metrics": {
+    "turn_count": 4
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-05-03T13:07:31.412716Z",
+    "agent_lines": 0,
+    "agent_removed": 1937,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 0,
+    "total_lines_changed": 1937,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 12,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 12
+      }
+    }
+  ]
+}

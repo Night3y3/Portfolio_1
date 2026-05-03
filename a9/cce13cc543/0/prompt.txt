@@ -1,0 +1,4 @@
+error: lockfile had changes, but lockfile is frozen
+18:36:18.613    note: try re-running without --frozen-lockfile and commit the updated lockfile
+
+fix
