@@ -1,0 +1,105 @@
+hey can you fix my @src/pages/index.astro so that i get all the design content
+
+---
+
+I will need the whole site in dark mode
+
+---
+
+Do the following things:
+
+use @public/logos/houseofedtech-logo.png in place of the company i am currently working right now
+
+instead of open sources and brand works, just use worked with and use all the logos instead of @public/logos/houseofedtech-logo.png
+
+---
+
+Make the worked with section better
+
+---
+
+Not like that, the previous one but with very short description, transparent background and very simple
+
+---
+
+Instead of Streaming platform give Learning Ai in bites or shorts or something better
+
+---
+
+use Image from astro
+
+---
+
+can we copy the person name font and stack section from this portfolio
+
+https://ayomiide.vercel.app/
+
+---
+
+In stack add things related to expo also
+
+---
+
+Add cloudflare too
+
+---
+
+I am person who do not write blogs but does informative tweets so mention that accordingly
+
+---
+
+my x account = https://x.com/sabujghosh21 and github = https://github.com/Night3y3 and linkdlen = https://www.linkedin.com/in/sabujghosh/
+
+insert these links in the required places as right now they are using placeholders, keep it subtle as always
+
+---
+
+In the meta data use Sabuj Ghosh -- Software Engineer of the site
+
+---
+
+remove the freelancing part
+
+---
+
+Remove the get in tocuh part to instead at a mail icon on top nagivation which opens up to gmail or any provided mailer with mail as sabrexghosh@gmail.com
+
+---
+
+reduce the too much space between hero, project and stack
+
+---
+
+can we use @src/components/ui/dotted-glow-background.tsx as the background of my whole site
+
+---
+
+the nav bar too
+
+---
+
+okay now we need to introduce in site display website using vaul drawer, for aitv it will be aitv.pro, https://be10x.in/ , https://www.xade.xyz/, https://apnasanatan.com/, it should be very smooth and there should be cross and redirect button, cross will close the drawer and redirect will redirect to a new tab
+
+---
+
+It should not that the full width, it should be smaller, and it will come more up
+
+---
+
+it will happen at the center of the screen
+
+---
+
+It will also happen for my company i am working on
+
+---
+
+we need to use the linkedln logo, it is not present in lucide react you can use a differnt lightweight package for this
+
+---
+
+i have by mistake commited my env, tell me the cmd to fix it
+
+---
+
+i have by mistake overriden the last few changes can you fix it

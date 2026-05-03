@@ -1,0 +1,33 @@
+{
+  "cli_version": "0.5.5",
+  "checkpoint_id": "32a62871e711",
+  "strategy": "manual-commit",
+  "branch": "astro-portfolio",
+  "checkpoints_count": 13,
+  "files_touched": [
+    "src/components/EmployerLink.tsx",
+    "src/components/Hero.astro",
+    "src/components/Navigation.tsx",
+    "src/components/Projects.astro",
+    "src/components/SitePreviewDrawer.tsx",
+    "src/components/Stack.astro",
+    "src/components/WorkList.tsx",
+    "src/components/ui/dotted-glow-background.tsx",
+    "src/layouts/main.astro"
+  ],
+  "sessions": [
+    {
+      "metadata": "/32/a62871e711/0/metadata.json",
+      "transcript": "/32/a62871e711/0/full.jsonl",
+      "content_hash": "/32/a62871e711/0/content_hash.txt",
+      "prompt": "/32/a62871e711/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 1033611,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 6942510,
+    "output_tokens": 41304,
+    "api_call_count": 109
+  }
+}
