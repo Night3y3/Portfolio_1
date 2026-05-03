@@ -1,0 +1,87 @@
+{
+  "cli_version": "0.5.5",
+  "checkpoint_id": "fc132097b44a",
+  "session_id": "4c630e94-45d5-40a0-bd15-fb97141a81e8",
+  "strategy": "manual-commit",
+  "created_at": "2026-05-03T21:11:06.330423Z",
+  "branch": "astro-portfolio",
+  "checkpoints_count": 4,
+  "files_touched": [
+    "astro.config.mjs",
+    "package-lock.json",
+    "package.json",
+    "public/robots.txt",
+    "src/layouts/main.astro"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-4-6",
+  "turn_id": "51afa3f20855",
+  "token_usage": {
+    "input_tokens": 93508,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 550202,
+    "output_tokens": 4126,
+    "api_call_count": 16
+  },
+  "session_metrics": {
+    "turn_count": 4
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-05-03T21:11:06.328064Z",
+    "agent_lines": 99,
+    "agent_removed": 2,
+    "human_added": 3,
+    "human_modified": 2,
+    "human_removed": 0,
+    "total_committed": 104,
+    "total_lines_changed": 106,
+    "agent_percentage": 95.28301886792453,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 12,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 12
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 17,
+      "user_lines_removed": 2,
+      "agent_lines_added": 77,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 12,
+        "astro.config.mjs": 5
+      },
+      "user_removed_per_file": {
+        "astro.config.mjs": 2
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 12,
+      "user_lines_removed": 0,
+      "agent_lines_added": 82,
+      "agent_lines_removed": 2,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 12
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 12,
+      "user_lines_removed": 0,
+      "agent_lines_added": 106,
+      "agent_lines_removed": 4,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 12
+      }
+    }
+  ]
+}
