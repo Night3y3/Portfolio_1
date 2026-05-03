@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css"
+import { DottedGlowBackground } from "@/components/ui/dotted-glow-background"
 ---
 
 <html lang="en" class="dark">
@@ -23,7 +24,19 @@ import "@/styles/global.css"
     />
     <title>Sabuj Ghosh — Software Engineer</title>
   </head>
-  <body>
-    <slot />
+  <body class="relative bg-background text-foreground">
+    <div class="pointer-events-none fixed inset-0 -z-10" aria-hidden="true">
+      <DottedGlowBackground
+        client:load
+        gap={22}
+        radius={1.2}
+        opacity={0.5}
+        darkColor="rgba(255,255,255,0.55)"
+        darkGlowColor="rgba(120, 180, 255, 0.6)"
+      />
+    </div>
+    <div class="relative z-0">
+      <slot />
+    </div>
   </body>
 </html>

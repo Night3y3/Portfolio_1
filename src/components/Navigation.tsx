@@ -1,8 +1,8 @@
-import { GitBranchIcon, XIcon } from 'lucide-react';
+import { FaEnvelope, FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 
 export function Navigation() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[hsl(0,0%,4%,0.7)] backdrop-blur-xl border-b border-border/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-border/20">
       <div className="max-w-2xl mx-auto px-6 h-16 flex items-center justify-between">
         <a
           href="/"
@@ -12,13 +12,20 @@ export function Navigation() {
         </a>
         <div className="flex items-center gap-0.5">
           <a
+            href="mailto:sabrexghosh@gmail.com"
+            className="inline-flex items-center justify-center h-9 w-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200"
+            aria-label="Email"
+          >
+            <FaEnvelope className="h-[16px] w-[16px]" />
+          </a>
+          <a
             href="https://x.com/sabujghosh21"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-9 w-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200"
             aria-label="X"
           >
-                <XIcon className="h-[18px] w-[18px]" strokeWidth={1.8} />
+            <FaXTwitter className="h-[16px] w-[16px]" />
           </a>
           <a
             href="https://github.com/Night3y3"
@@ -27,7 +34,7 @@ export function Navigation() {
             className="inline-flex items-center justify-center h-9 w-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200"
             aria-label="GitHub"
           >
-            <GitBranchIcon className="h-[18px] w-[18px]" strokeWidth={1.8} />
+            <FaGithub className="h-[16px] w-[16px]" />
           </a>
           <a
             href="https://www.linkedin.com/in/sabujghosh/"
@@ -36,7 +43,7 @@ export function Navigation() {
             className="inline-flex items-center justify-center h-9 w-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200"
             aria-label="LinkedIn"
           >
-            <GitBranchIcon className="h-[18px] w-[18px]" strokeWidth={1.8} />
+            <FaLinkedin className="h-[16px] w-[16px]" />
           </a>
         </div>
       </div>

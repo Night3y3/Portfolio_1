@@ -1,5 +1,5 @@
 ---
-import ProjectCard from './ProjectCard.astro';
+import { WorkList } from './WorkList';
 import aitvLogo from '@/assets/logos/aitv-logo.png';
 import be10xLogo from '@/assets/logos/be10x-logo.png';
 import xadeLogo from '@/assets/logos/xade-logo.png';
@@ -9,37 +9,35 @@ const workedWith = [
   {
     title: 'AITV',
     description: 'Learn AI in bite-sized shorts.',
-    href: 'https://example.com',
-    image: aitvLogo,
+    href: 'https://aitv.pro',
+    image: aitvLogo.src,
   },
   {
     title: 'be10x',
     description: 'AI upskilling.',
-    href: 'https://example.com',
-    image: be10xLogo,
+    href: 'https://be10x.in/',
+    image: be10xLogo.src,
   },
   {
     title: 'Xade',
     description: 'Onchain finance.',
-    href: 'https://example.com',
-    image: xadeLogo,
+    href: 'https://www.xade.xyz/',
+    image: xadeLogo.src,
   },
   {
     title: 'Apna Santan',
     description: 'Devotional commerce.',
-    href: 'https://example.com',
-    image: apnaSantanLogo,
+    href: 'https://apnasanatan.com/',
+    image: apnaSantanLogo.src,
   },
 ];
 ---
 
-<section class="pb-24 md:pb-32">
+<section class="pb-10 md:pb-14">
   <div class="max-w-2xl mx-auto px-6">
     <h2 class="text-[13px] font-medium uppercase tracking-widest text-muted-foreground/50 mb-5">
       Works
     </h2>
-    <div class="grid gap-2">
-      {workedWith.map((project) => <ProjectCard {...project} />)}
-    </div>
+    <WorkList client:load items={workedWith} />
   </div>
 </section>
