@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import { ArrowRight } from 'lucide-react';
+import houseOfEdtechLogo from '@/assets/logos/houseofedtech-logo.png';
+---
+
+<section class="pt-36 pb-24 md:pt-44 md:pb-32">
+  <div class="max-w-2xl mx-auto px-6">
+    <p class="mb-6 text-[12.5px] uppercase tracking-[0.18em] text-muted-foreground">
+      Software Engineer
+    </p>
+    <h1
+      class="font-serif font-normal text-foreground"
+      style="font-family: var(--font-serif); font-size: clamp(3.5rem, 11vw, 6rem); line-height: 0.95; letter-spacing: -0.035em;"
+    >
+      Sabuj<br />
+      <em class="italic opacity-55" style="font-family: var(--font-serif);">Ghosh</em>
+    </h1>
+    <p class="mt-6 text-[17px] md:text-lg text-muted-foreground leading-[1.65]">
+      Currently working as a Software Engineer at{' '}
+      <a
+        href="https://houseofedtech.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 align-baseline text-foreground underline decoration-border underline-offset-[5px] hover:decoration-foreground/60 transition-colors duration-200"
+      >
+        <Image
+          src={houseOfEdtechLogo}
+          alt="House of EdTech"
+          width={20}
+          height={20}
+          class="inline-block h-5 w-5 rounded-sm object-contain align-[-3px]"
+        />
+        House of EdTech
+      </a>
+      .
+    </p>
+    <div class="mt-10 flex items-center gap-2 text-[15px] text-muted-foreground">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        Available for freelance
+      </span>
+      <ArrowRight className="h-3 w-3" />
+      <a
+        href="mailto:sabrexghosh@gmail.com"
+        class="text-foreground underline decoration-border underline-offset-[5px] hover:decoration-foreground/60 transition-colors duration-200"
+      >
+        Get in touch
+      </a>
+    </div>
+  </div>
+</section>
