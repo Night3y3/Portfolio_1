@@ -1,0 +1,9 @@
+can you tell me how can i deploy my astro app to cloudflare
+
+---
+
+react-icons/fa6 is causing build fail
+
+---
+
+Option A
