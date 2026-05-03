@@ -1,0 +1,1 @@
+use @src/assets/logos/sabuj-logo.png for the metadata logo
