@@ -1,0 +1,47 @@
+{
+  "cli_version": "0.5.5",
+  "checkpoint_id": "ef09004ac678",
+  "session_id": "edbc3dba-58e7-4943-9e4e-f0cbcc507567",
+  "strategy": "manual-commit",
+  "created_at": "2026-05-04T20:05:07.136066Z",
+  "branch": "astro-portfolio",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "public/og-image.png",
+    "src/layouts/main.astro"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-4-6",
+  "turn_id": "f0de3a222241",
+  "token_usage": {
+    "input_tokens": 86436,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 378870,
+    "output_tokens": 3052,
+    "api_call_count": 11
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-05-04T20:05:07.134226Z",
+    "agent_lines": 5,
+    "agent_removed": 1,
+    "human_added": 0,
+    "human_modified": 3,
+    "human_removed": 0,
+    "total_committed": 8,
+    "total_lines_changed": 9,
+    "agent_percentage": 66.66666666666666,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 12,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 12
+      }
+    }
+  ]
+}
