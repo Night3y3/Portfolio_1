@@ -1,0 +1,7 @@
+Issues Found with your metadata
+OG Image size (1.38 MB) too large for: WhatsApp. Recommended size: < 600 KB
+Image is 1254x1254px. Recommended size is 1200x630px.
+Missing a clear headline in your image
+Missing a call-to-action in your image
+Title is short (31 characters). Optimal: 50-60 characters
+Description is short (31 chars). Optimal: 110-160 chars
