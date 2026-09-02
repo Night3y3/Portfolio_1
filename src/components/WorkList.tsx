@@ -24,7 +24,7 @@ export function WorkList({ items }: Props) {
           <div className="flex items-center gap-3">
             <img
               src={item.image}
-              alt={item.title}
+              alt=""
               loading="lazy"
               className="shrink-0 h-7 w-7 object-contain rounded"
             />

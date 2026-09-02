@@ -3,6 +3,7 @@ import { ExternalLink, X } from 'lucide-react';
 import {
   Drawer,
   DrawerContent,
+  DrawerDescription,
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
@@ -31,6 +32,9 @@ export function SitePreviewDrawer({ site, children, triggerClassName }: Props) {
       </DrawerTrigger>
       <DrawerContent className="!inset-auto !top-1/2 !left-1/2 !-translate-x-1/2 !-translate-y-1/2 !bottom-auto !mt-0 !mb-0 w-[92vw] max-w-3xl h-[78vh] !max-h-[85vh] bg-background border border-border/40 !rounded-xl shadow-2xl">
         <DrawerTitle className="sr-only">{site.title} preview</DrawerTitle>
+        <DrawerDescription className="sr-only">
+          Preview of {site.title} — use Open in new tab to visit the full site.
+        </DrawerDescription>
 
         <div className="flex items-center justify-between gap-3 px-4 py-3 border-b border-border/30">
           <div className="flex items-center gap-2.5 min-w-0">
