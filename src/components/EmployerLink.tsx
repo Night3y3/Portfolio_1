@@ -14,7 +14,7 @@ export function EmployerLink({ title, href, image }: Props) {
     >
       <img
         src={image}
-        alt={title}
+        alt=""
         className="inline-block h-5 w-5 rounded-sm object-contain align-[-3px]"
       />
       {title}
